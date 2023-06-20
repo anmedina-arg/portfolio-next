@@ -1,7 +1,20 @@
-export default function ExperienceSection() {
+import React, { MutableRefObject } from "react";
+
+type ExperienceSectionProps = {
+  index: number;
+  scrollRefs: MutableRefObject<any[]>;
+};
+
+const ExperienceSection: React.FC<ExperienceSectionProps> = ({ index, scrollRefs }) => {
   return (
-    <section id='experience' className="flex justify-center items-center w-full h-screen mx-24 bg-red-400">
-      Hola soy la experiencia
+    <section
+      ref={scrollRefs.current[index]}
+      id="experience"
+      className="flex justify-center items-center w-full h-screen"
+    >
+      ¡Hola, soy la sección ExperienceSection!
     </section>
-  )
-}
+  );
+};
+
+export default ExperienceSection;

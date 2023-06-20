@@ -1,7 +1,20 @@
-export default function ContactSection() {
+import React, { MutableRefObject } from "react";
+
+type ContactSectionProps = {
+  index: number;
+  scrollRefs: MutableRefObject<any[]>;
+};
+
+const ContactSection: React.FC<ContactSectionProps> = ({ index, scrollRefs }) => {
   return (
-    <section id='contact-me' className="flex justify-center items-center w-full h-screen mx-24 bg-red-400">
-      hola soy contact
+    <section
+      ref={scrollRefs.current[index]}
+      id="contact-me"
+      className="flex justify-center items-center w-full h-screen"
+    >
+      ¡Hola, soy la sección ContactSection!
     </section>
-  )
-}
+  );
+};
+
+export default ContactSection;
