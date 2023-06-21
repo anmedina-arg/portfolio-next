@@ -7,6 +7,8 @@ import ContactSection from "@/sections/contactSection";
 import ExperienceSection from "@/sections/experienceSection";
 import ProjectsSection from "@/sections/projectsSection";
 
+const useConection = () => { };
+
 export default function Home() {
   const [active, setActive] = useState(0);
 
@@ -22,9 +24,11 @@ export default function Home() {
   );
 
   const scrollTo = (index: number) => {
-    scrollRefs.current[index].current?.scrollIntoView({ behavior: "smooth", block: "start" });
+    scrollRefs.current[index].current?.scrollIntoView({ behavior: "smooth", block: 'start' });
+
     setActive(index);
   };
+
 
   const scrollHandler = () => {
     const scrollRefsElements = scrollRefs.current;
@@ -51,7 +55,7 @@ export default function Home() {
   }, []);
 
   return (
-    <main className="bg-fixed bg-cover bg-center bg-[url('/background4.webp')] bg-no-repeat flex min-h-screen flex-col items-center justify-between">
+    <main className="bg-fixed bg-cover bg-center bg-[url('/background4.webp')] bg-no-repeat flex min-h-screen flex-col items-center justify-between ">
       <NavBar navRefs={navRefs} active={active} scrollTo={scrollTo} />
       <AboutSection scrollRefs={scrollRefs} index={0} />
       <ExperienceSection scrollRefs={scrollRefs} index={1} />

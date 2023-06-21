@@ -7,7 +7,7 @@ type NavBarProps = {
 
 const NavBar: React.FC<NavBarProps> = ({ navRefs, active, scrollTo }) => {
   return (
-    <header className="flex justify-end w-full bg-darkBlueTheme text-grayLigthTheme fixed p-4 shadow-shadowNavTheme rounded-b-xl">
+    <header className="flex justify-end w-full bg-darkBlueTheme text-grayLigthTheme fixed p-4 shadow-shadowNavTheme rounded-b-xl z-10">
       {/* <Logotipo /> */}
       <div className="hidden md:flex">
         <Anchor
