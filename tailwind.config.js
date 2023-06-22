@@ -23,7 +23,7 @@ module.exports = {
           "0 20px 25px -5px rgba(0,0,0,0.5), 0 8px 10px -6px rgba(0,0,0,0.5)",
       },
       gridTemplateColumns: {
-        "auto-fit-minmax": "repeat(auto-fit, minmax(350px, 1fr))",
+        "auto-fit-minmax": "repeat(auto-fit, minmax(250px, 1fr))",
       },
     },
   },

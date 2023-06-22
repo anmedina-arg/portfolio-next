@@ -12,11 +12,11 @@ const ProjectSection: React.FC<ProjectSectionProps> = ({ index, scrollRefs }) =>
     <section
       ref={scrollRefs.current[index]}
       id="project"
-      className="relative justify-center items-center w-3/4 h-full"
+      className="flex flex-col relative justify-center items-center w-full md:w-3/4  h-full"
     >
       <h2>Mis proyectos!</h2>
       {/* <div className="absolute rounded-xl shadow-xl w-full h-full bg-neutral-100 opacity-50 border-black border-2 border-solid "></div> */}
-      <div className="grid gap-10 p-10 grid-cols-auto-fit-minmax m-5 shadow-xl bg-transparentTheme rounded-3xl">
+      <div className="grid gap-10 p-10 grid-cols-auto-fit-minmax m-5 shadow-xl bg-transparentTheme rounded-3xl w-full">
         {
           PROJECTS.map((project, index) => <Card project={project} key={index} />)
         }
