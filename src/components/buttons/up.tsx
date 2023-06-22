@@ -2,7 +2,7 @@ import Link from "next/link"
 
 export default function UpButton() {
   return (
-    <Link href={'/'} className="fixed bottom-2 right-2 rounded-full bg-oliveGreenTheme text-grayLigthTheme h-10 w-10 flex justify-center items-center">
+    <Link href={'/'} className="fixed bottom-2 right-2 rounded-full bg-oliveGreenTheme text-grayLigthTheme h-10 w-10 flex justify-center items-center border-grayLigthTheme border-2 border-solid shadow-xl">
       <svg width="20px" height="20px" viewBox="0 -4.5 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg">
         <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
           <g id="Dribbble-Light-Preview" transform="translate(-260.000000, -6684.000000)" fill="rgb(194 188 186)">
